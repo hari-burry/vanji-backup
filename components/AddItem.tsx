@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, Button, StyleSheet, Platform,TextInput } from 'react-native';
 import DateTimePicker from '@react-native-community/datetimepicker';
 
-const AddItemComponent = ({setAdd,mealname}) => {
+const AddItemComponent = ({setAdd,mealname,setBool}) => {
    const [foodname,setFoodname]=useState('');
   async function AddItem(){
     if(foodname){
@@ -23,6 +23,7 @@ const AddItemComponent = ({setAdd,mealname}) => {
                   
       const errorData = await response.json();
       throw new Error(errorData.err || 'Failed to delete item');
+      setBool(true);
     }
 
     const data = await response.json();

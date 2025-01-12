@@ -16,10 +16,17 @@ export default function StackLayout() {
         name="explore"
         options={{ header: (props) => <CustomHeader {...props} /> }}
       />
+      <Stack.Screen 
+      name="Scanner" 
+      options={{ header: (props) => <CustomHeader {...props} /> }}
+      />
       <Stack.Screen
         name="Orders"
         options={{ header: (props) => <CustomHeader {...props} /> }}
       />
+
+      
+
     </Stack>
     </AppProvider>
   );

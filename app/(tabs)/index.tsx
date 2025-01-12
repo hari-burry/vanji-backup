@@ -8,6 +8,9 @@ export default function HomeScreen() {
   const [pwd,setPwd]=useState('');
   const [red,setRed]=useState(false);
   const navigation=useNavigation();
+
+
+
   const changepwd=(text)=>{
     setPwd(text);
     setRed(false);
@@ -25,6 +28,9 @@ export default function HomeScreen() {
     }
 
   }
+
+
+
   return (
     <View style={styles.container}>
       <View style={styles.box}>
@@ -47,6 +53,10 @@ export default function HomeScreen() {
     </View>
   );
 }
+
+
+
+
 
 const styles = StyleSheet.create({
   container: {

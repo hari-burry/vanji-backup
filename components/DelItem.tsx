@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, Button, StyleSheet, Platform } from 'react-native';
 import DateTimePicker from '@react-native-community/datetimepicker';
 
-const DelItemComponent = ({name,setDel,mealname}) => {
+const DelItemComponent = ({name,setDel,mealname,setBool}) => {
     
        async function deleteItem(){
               const itemName=name;
@@ -22,6 +22,7 @@ const DelItemComponent = ({name,setDel,mealname}) => {
                   
                   const errorData = await response.json();
                   throw new Error(errorData.err || 'Failed to delete item');
+                  setBool(true);
                 }
             
                 const data = await response.json();
